@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 
 
 /* 
- * Name: Jamil Matheny
+ * Name: Jamil Matheny & Da'Montaye Snipes
    Date: 10/14/2020
-   Class: CIS214 */
+   Class: CIS214 
+*/
+
 namespace GradeBook
 {
     public class GradeBookTest
@@ -12,14 +14,15 @@ namespace GradeBook
         public static void Main(string[] args)
         {
             // Create a GradeBook object
-            GradeBook gradeBook1 = new GradeBook( // invokes constructor
-                "CS101 Introduction to C# Programming" );
-            GradeBook gradeBook2 = new GradeBook( // invokes constructor
-                "CS102 Data Structures in C#");
+            GradeBook gradeBook1 = new GradeBook("Sam Smith", "CS101 Introduction to C# Programming");
+             gradeBook1.DisplayMessage(); // display welcome message
 
-            // display initial value of CourseName
-            Console.WriteLine("gradeBook1 course name is: {0}", gradeBook1.CourseName);
-            Console.WriteLine("gradeBook2 course name is: {0}", gradeBook2.CourseName);
+            Console.WriteLine("\nChanging instructor name to Judy Jones\n"); // changes instructor's name
+            gradeBook1.InstructorName = "Judy Jones";
+
+            gradeBook1.DisplayMessage(); // display welcome message
+         
+
 
         } // end Main
     } // end class GradeBookTest
