@@ -1,31 +1,34 @@
-﻿using System;
+using System;
 
 /* 
- * Name: Jamil Matheny
+ * Name: Jamil Matheny & Da'Montaye Snipes
    Date: 10/14/2020
-   Class: CIS214 */
+   Class: CIS214 
+*/
 
 namespace GradeBook
 {
-    public class GradeBook
-    {
-        // auto-implemented property CourseName implicity created an 
-        // instance variable for this GradeBook's course name
-        public string CourseName { get; set; }
+    // auto-implemented property CourseName implicity created an 
+    // instance variable for this GradeBook's course name
+        public class GradeBook
+            {
 
-        // constructor initializes auto-implemented property
-        // CourseName with string supplied as argument
-        public GradeBook (string name)
-        {
-            CourseName = name; // set CourseName to name
-        } // end Constructor
+            // Declare variables
+            public string CourseName;
+            public string InstructorName;
+                public GradeBook (string name, string course) // declares the strings
+                    {
+                        // Assigns the variables to be used in the 'DisplayMessage'
+                        CourseName = course; // assign the strings here
+                        InstructorName = name;
+                    }
 
-        public void DisplayMessage()
-        {
-            // use auto-implemented property CourseName to get the name of the course 
-            // that this GradeBook represents
-            Console.WriteLine("Welcome to the grade book for\n{0}!", CourseName);
+                        public void DisplayMessage()
+                        {
+                            Console.WriteLine("Welcome to the course: " + CourseName); // outputs 'CourseName' variable 
+                            Console.WriteLine("This course is presented by: " + InstructorName); // outputs 'InstructorName' variable
+                        } // end method DisplayMessage
 
-        } // end method DisplayMessage
-    } // end class GradeBook
-} // end namespace
+    } // end method DisplayMessage
+    
+} // end class GradeBook
